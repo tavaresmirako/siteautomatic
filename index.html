@@ -1,0 +1,65 @@
+<!DOCTYPE html5>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body onload="carregar()">
+
+    <body onload="lblGreetings()">
+        <p><b> O Senhor te abençoe e te guarde !</b>
+        </p>
+        <div id="lblGreetings">
+            <script>
+                var minhaDate = new Date();
+                var h = minhaDate.getHours();
+
+                var resultado;
+
+
+                if (h >= 0 && h <= 5) { // entre meia noite (0h) e 5 da madrugada
+                    resultado = 'BOA MADRUGADA !';
+                } else if (h >= 6 && h < 12) { // entre 6 e 11 da manhã
+                    resultado = 'BOM DIA !';
+                } else if (h >= 12 && h < 18) { // entre meio dia (12h) e 17 (5h) da tarde
+                    resultado = 'BOA TARDE !';
+                } else if (h >= 18 && h <= 23) { // entre 18 (6h) e 23 (11h) da noite
+                    resultado = 'BOA NOITE !';
+                }
+
+                document.getElementById('lblGreetings').innerHTML =
+                    '<b>' + resultado + '</b>'
+            </script>
+        </div>
+
+    </body>
+
+
+    <header>
+        <h1><b>HORA CERTA NO BRASIL.</b></h1>
+    </header>
+    <section>
+        <div id="msg">
+
+            aqui vai aparecer a mensagen.....
+
+        </div>
+        <div id=" foto ">
+            <img src="manha.png " alt="foto do dia ">
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="script.js">
+    </script>
+
+</body>
+
+</html>
